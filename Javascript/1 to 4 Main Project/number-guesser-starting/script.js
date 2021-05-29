@@ -53,11 +53,14 @@ const absVal = guess =>{
         guess=guess*-1;
         return guess;
     }
+    else {
+        return guess;
+    }
 }
 
 const compareGuesses = (humanGuess,computerGuess,randomNumber)=>{
-    let humanCloseness=humanGuess-randomNumber;
-    let computerCloseness = computerGuess-randomNumber;
+    let humanCloseness=randomNumber-humanGuess;
+    let computerCloseness = randomNumber-computerGuess;
     let humanFinal = absVal(humanCloseness);
     let computerFinal = absVal(computerCloseness);
     if (humanFinal<computerFinal){
@@ -68,6 +71,12 @@ const compareGuesses = (humanGuess,computerGuess,randomNumber)=>{
     }
     else if(humanFinal===computerFinal){
         return true;
+    }
+    else if (humanFinal===randomNumber){
+        return true;
+    }
+    else if(computerFinal===randomNumber){
+        return false;
     }
 }
 
@@ -86,4 +95,8 @@ const advanceRound=()=>{
     currentRoundNumber = currentRoundNumber + 1;
 
 }
+
+
+
+
 */
