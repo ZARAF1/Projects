@@ -25,39 +25,44 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 
 // Add your functions below:
 // using Luhn algorithm
-// double every other number apart from check digit
+// double every other number apart from check digit i.e., the last digit
 const validateCreditCard = arr =>{
     let doubledArr=[];
     for (let i=0;i<arr.length;i++){
         if (i!==arr.length-1){
             if (i%2===0){
-             doubledArr.push(arr[i]*2)
-         }
+                doubledArr.push(arr[i]*2)
+            }
             else if (i%2===1){
-             doubledArr.push(arr[i])
-         }
+                doubledArr.push(arr[i])
+            }
 
-                            }
+        }
         else if (i===arr.length-1){
             doubledArr.push(arr[i])
-     }
+        }
 
- }
-    console.log('doubledArr '+ doubledArr)
+    }
+    console.log(doubledArr)
+
+
     // subtract 9 from numbers greater than 9
+
     let subtractedArr=[]
     for (let j=0;j<doubledArr.length;j++) {
 
-     if (doubledArr[j] > 9){
-         subtractedArr.push(doubledArr[j]-9)
-     }
-     else{
-         subtractedArr.push(doubledArr[j])
-     }
+        if (doubledArr[j] > 9){
+            subtractedArr.push(doubledArr[j]-9)
+        }
+        else{
+            subtractedArr.push(doubledArr[j])
+        }
 
-         }
-    console.log('subtractedArr '+subtractedArr)
+    }
+    console.log(subtractedArr)
+
 // sum up all numbers
+
     let arrSum=subtractedArr.reduce((acc,currentVal)=>{
         return acc+currentVal;
     })
@@ -67,21 +72,25 @@ const validateCreditCard = arr =>{
     if (arrSum%10===0){
         return true;
     }
- else{
-     return false;
+    else{
+        return false;
     }
 
 }
+// checking arrays to determine if code works
 
-console.log('valid '+valid5)
 validateCreditCard(valid5)
+
+
+
 // finding invalid card from batch array
+
 const findInvalidCards =arr=>{
     let newArr= arr.filter(element=>{
-      if (validateCreditCard(element)===false){
-          return element;
-      }
-    }
+            if (validateCreditCard(element)===false){
+                return element;
+            }
+        }
     )
     return newArr;
     console.log(newArr.length)
