@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #main {
+        position: relative;
+      }
+      div {
+        background-color: grey;
+        padding: 10px;
+        border: 2px solid yellow;
+        color: white;
+        cursor: grab;
+      }
+      .magic {
+        display: none;
+      }
+      div:hover .magic {
+        display: block;
+        background-color: aqua;
+        padding: 12px;
+        border: 2px solid red;
+        cursor: grab;
+        position: absolute;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div>mouse over me</div>
+      <div class="magic">here i am</div>
+    </div>
+  </body>
+</html>

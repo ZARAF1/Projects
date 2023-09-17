@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  text-align: center;
+}
+
+.top-container {
+  background-color: #66BFBF;
+  padding-top: 60px;
+  position: relative;
+}
+
+.top-cloud {
+  position: absolute;
+  right: 20%;
+  top: 7%;
+  width: 20em;
+  margin:0 auto;
+}
+
+h1 {
+  font-family: 'Hachi Maru Pop', cursive;
+  margin-top: 70px;
+  font-size: 4vw;
+}
+.outro{
+  font-family: 'Krona One', sans-serif;
+  font-size: 2.5rem;
+  color:black;
+
+}
+h2 {
+  font-family: 'MuseoModerno', cursive;
+    font-size: 3rem;
+    color:#66BFBF;
+}
+h3{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+}
+.bottom-cloud {
+  position: absolute;
+  left: 20%;
+  width: 12em;
+}
+
+
+.profile-img{
+  border-radius: 100%;
+  width: 30%;
+
+}
+
+p{
+  color:#40514E;
+  font-size: 1.5rem;
+}
+
+.profile{
+  width:50%;
+  margin: auto;
+}
+
+hr{
+
+  width:10%;
+  border-width: 10px;
+  border-style: none none dotted none;
+  border-color: #EAF6F6;
+  padding:30px;
+  margin:auto;
+
+}
+/* .skills{
+
+
+
+} */
+.skillone{
+  width:50%;
+  margin:100px auto 100px auto;
+  text-align: left;
+  line-height: 2;
+
+}
+
+.skilltwo{
+
+    width:50%;
+    margin:100px auto 100px auto;
+    text-align: left;
+    line-height: 2;
+}
+.skilloneimg{
+  width:25%;
+  border-radius: 100%;
+  float:left;
+  margin-right: 30px;
+}
+.skilloneimg:hover{
+transform: scale(1.25);
+}
+.skilltwoimg{
+  width:25%;
+  float: right;
+  margin-left: 30px;
+}
+.skilltwoimg:hover{
+transform: scale(1.25);
+}
+.contact-me{
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.btn{
+  border: 1px solid transparent;
+  background-color: teal;
+  color:white;
+  padding:5px;
+  border-radius: 5px;
+
+}
+.btn:hover{
+  animation-name: btn;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes btn {
+  100%{
+    background: linear-gradient(45deg, darkred, darkred, darkred);
+    transform: scale(1.25);
+
+  }
+
+}
+p.desc{margin-bottom: 50px;}
+
+.bottom-container{
+  height: auto;
+  background-color: #11999E;
+  padding: 50px;
+}
+
+.footer-link{
+    margin:auto 20px;
+  color:white;
+}
