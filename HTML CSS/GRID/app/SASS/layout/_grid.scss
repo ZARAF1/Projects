@@ -1,0 +1,21 @@
+@use '../globals/index' as glob;
+
+.grid {
+  display: grid;
+  background-color: glob.$gridBackgroundColor;
+  grid-template-columns: auto auto auto auto auto auto;
+  // grid-auto-columns: 50px;
+  padding: 10px;
+  gap: 20px;
+  width: 600px;
+  height: 500px;
+  justify-content: space-around;
+  align-content: start;
+
+  .grid__child {
+    font-size: glob.$childFontSize;
+    background-color: glob.$gridItemBackgroundColor;
+    text-align: center;
+    padding: 10px;
+  }
+}
